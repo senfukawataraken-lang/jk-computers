@@ -1,0 +1,1288 @@
+<!--
+=========================================================
+J.K COMPUTERS — COMPLETE PROFESSIONAL BUSINESS WEBSITE
+Single File Version (HTML + CSS + JavaScript)
+Save as: index.html
+=========================================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+J.K Computers | Repair & IT Services
+</title>
+
+<!-- SEO -->
+<meta name="description"
+content="Professional computer repair and IT services in Kampala Uganda.">
+
+<meta name="keywords"
+content="computer repair, laptop repair, IT support Kampala Uganda">
+
+<meta name="author"
+content="J.K Computers">
+
+<!-- GOOGLE FONTS -->
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
+
+<!-- FONT AWESOME -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<style>
+
+/* ======================================
+GLOBAL
+====================================== */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#f5f7ff;
+  color:#111827;
+  overflow-x:hidden;
+  transition:0.4s;
+}
+
+section{
+  padding:90px 8%;
+}
+
+img{
+  max-width:100%;
+}
+
+/* ======================================
+DARK MODE
+====================================== */
+
+.dark-mode{
+  background:#020617;
+  color:white;
+}
+
+.dark-mode .card,
+.dark-mode .service-card,
+.dark-mode .testimonial,
+.dark-mode .blog-card,
+.dark-mode .booking-form,
+.dark-mode .tracker-box,
+.dark-mode .calculator,
+.dark-mode .login-box,
+.dark-mode .invoice,
+.dark-mode .dashboard-card{
+  background:#1e293b;
+  color:white;
+}
+
+/* ======================================
+HEADER
+====================================== */
+
+header{
+  background:
+  linear-gradient(135deg,#0f172a,#2563eb,#06b6d4);
+
+  padding:20px 8%;
+
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo{
+  font-size:28px;
+  color:white;
+  font-weight:700;
+}
+
+.logo span{
+  color:#facc15;
+}
+
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:25px;
+}
+
+nav a{
+  text-decoration:none;
+  color:white;
+  font-weight:500;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:#facc15;
+}
+
+.menu-btn{
+  display:none;
+  color:white;
+  font-size:28px;
+  cursor:pointer;
+}
+
+/* ======================================
+HERO
+====================================== */
+
+.hero{
+  min-height:100vh;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  text-align:center;
+
+  background:
+  linear-gradient(rgba(0,0,0,0.6),
+  rgba(0,0,0,0.6)),
+
+  url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1400&auto=format&fit=crop');
+
+  background-size:cover;
+  background-position:center;
+
+  color:white;
+}
+
+.hero h1{
+  font-size:65px;
+  margin-bottom:20px;
+}
+
+.hero span{
+  color:#facc15;
+}
+
+.hero p{
+  font-size:22px;
+  margin-bottom:30px;
+}
+
+.btn{
+  display:inline-block;
+  padding:15px 35px;
+  border-radius:40px;
+  background:#facc15;
+  color:black;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.btn:hover{
+  transform:scale(1.05);
+  background:white;
+}
+
+/* ======================================
+SECTION TITLES
+====================================== */
+
+.section-title{
+  text-align:center;
+  font-size:42px;
+  margin-bottom:60px;
+  color:#2563eb;
+}
+
+/* ======================================
+ABOUT
+====================================== */
+
+.about{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  align-items:center;
+}
+
+.about img{
+  border-radius:20px;
+}
+
+.about h3{
+  font-size:35px;
+  margin-bottom:20px;
+}
+
+/* ======================================
+SERVICES
+====================================== */
+
+.services-grid{
+  display:grid;
+  grid-template-columns:
+  repeat(auto-fit,minmax(250px,1fr));
+
+  gap:25px;
+}
+
+.service-card{
+  background:white;
+  padding:35px;
+  border-radius:25px;
+  text-align:center;
+  transition:0.4s;
+
+  box-shadow:
+  0 10px 30px rgba(0,0,0,0.08);
+}
+
+.service-card:hover{
+  transform:translateY(-10px);
+  background:#2563eb;
+  color:white;
+}
+
+.service-icon{
+  font-size:50px;
+  margin-bottom:20px;
+}
+
+/* ======================================
+GALLERY
+====================================== */
+
+.gallery-grid{
+  display:grid;
+  grid-template-columns:
+  repeat(auto-fit,minmax(250px,1fr));
+
+  gap:20px;
+}
+
+.gallery-grid img{
+  height:250px;
+  width:100%;
+  object-fit:cover;
+  border-radius:20px;
+  transition:0.4s;
+}
+
+.gallery-grid img:hover{
+  transform:scale(1.05);
+}
+
+/* ======================================
+TESTIMONIALS
+====================================== */
+
+.testimonials{
+  display:grid;
+  grid-template-columns:
+  repeat(auto-fit,minmax(300px,1fr));
+
+  gap:25px;
+}
+
+.testimonial{
+  background:white;
+  padding:35px;
+  border-radius:20px;
+
+  box-shadow:
+  0 5px 20px rgba(0,0,0,0.08);
+}
+
+.testimonial h4{
+  color:#2563eb;
+  margin-top:15px;
+}
+
+/* ======================================
+BOOKING FORM
+====================================== */
+
+.booking-form{
+  background:white;
+  padding:40px;
+  border-radius:25px;
+}
+
+.booking-form input,
+.booking-form textarea,
+.booking-form select{
+  width:100%;
+  padding:15px;
+  margin-bottom:15px;
+  border:none;
+  border-radius:10px;
+  background:#f1f5f9;
+}
+
+.booking-form button{
+  background:#2563eb;
+  color:white;
+  border:none;
+  padding:15px 30px;
+  border-radius:40px;
+  cursor:pointer;
+}
+
+/* ======================================
+DASHBOARD
+====================================== */
+
+.dashboard{
+  background:#0f172a;
+  padding:40px;
+  border-radius:25px;
+}
+
+.dashboard-grid{
+  display:grid;
+  grid-template-columns:
+  repeat(auto-fit,minmax(220px,1fr));
+
+  gap:20px;
+}
+
+.dashboard-card{
+  background:#1e293b;
+  color:white;
+  padding:30px;
+  border-radius:20px;
+  text-align:center;
+}
+
+.dashboard-card h2{
+  color:#06b6d4;
+  font-size:40px;
+}
+
+/* ======================================
+TRACKER
+====================================== */
+
+.tracker-box,
+.calculator,
+.login-box,
+.invoice{
+  background:white;
+  padding:40px;
+  border-radius:25px;
+}
+
+.tracker-box input,
+.calculator select,
+.login-box input{
+  width:100%;
+  padding:15px;
+  margin-bottom:15px;
+  border:none;
+  border-radius:10px;
+  background:#f1f5f9;
+}
+
+.result{
+  margin-top:20px;
+  background:#2563eb;
+  color:white;
+  padding:20px;
+  border-radius:15px;
+  display:none;
+}
+
+/* ======================================
+BLOG
+====================================== */
+
+.blog-grid{
+  display:grid;
+  grid-template-columns:
+  repeat(auto-fit,minmax(300px,1fr));
+
+  gap:25px;
+}
+
+.blog-card{
+  background:white;
+  border-radius:20px;
+  overflow:hidden;
+}
+
+.blog-card img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+}
+
+.blog-content{
+  padding:25px;
+}
+
+/* ======================================
+CONTACT
+====================================== */
+
+.contact{
+  background:#0f172a;
+  color:white;
+  border-radius:25px;
+  padding:40px;
+}
+
+.contact-container{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+}
+
+.contact-form input,
+.contact-form textarea{
+  width:100%;
+  padding:15px;
+  margin-bottom:15px;
+  border:none;
+  border-radius:10px;
+}
+
+.contact-form button{
+  background:#facc15;
+  border:none;
+  padding:15px 30px;
+  border-radius:40px;
+  cursor:pointer;
+  font-weight:600;
+}
+
+/* ======================================
+FLOATING BUTTONS
+====================================== */
+
+.whatsapp-btn,
+.theme-toggle,
+.live-chat{
+  position:fixed;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:white;
+  font-size:25px;
+  z-index:999;
+  text-decoration:none;
+}
+
+.whatsapp-btn{
+  background:#25D366;
+  right:20px;
+  bottom:20px;
+}
+
+.theme-toggle{
+  background:#2563eb;
+  right:20px;
+  bottom:95px;
+  border:none;
+  cursor:pointer;
+}
+
+.live-chat{
+  background:#0ea5e9;
+  left:20px;
+  bottom:20px;
+}
+
+/* ======================================
+ANIMATIONS
+====================================== */
+
+.fade-up{
+  opacity:0;
+  transform:translateY(40px);
+  transition:1s;
+}
+
+.fade-up.active{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* ======================================
+FOOTER
+====================================== */
+
+footer{
+  background:#020617;
+  color:white;
+  text-align:center;
+  padding:25px;
+}
+
+/* ======================================
+MOBILE
+====================================== */
+
+@media(max-width:900px){
+
+  .hero h1{
+    font-size:42px;
+  }
+
+  .about,
+  .contact-container{
+    grid-template-columns:1fr;
+  }
+
+  .menu-btn{
+    display:block;
+  }
+
+  nav ul{
+    position:absolute;
+    top:90px;
+    left:0;
+    width:100%;
+    background:#0f172a;
+    flex-direction:column;
+    text-align:center;
+    padding:20px;
+    display:none;
+  }
+
+  nav ul.active{
+    display:flex;
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- ======================================
+HEADER
+====================================== -->
+
+<header>
+
+<nav>
+
+<div class="logo">
+💻 J.K <span>Computers</span>
+</div>
+
+<div class="menu-btn"
+id="menu-btn">
+
+<i class="fas fa-bars"></i>
+
+</div>
+
+<ul id="nav-links">
+
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#blog">Blog</a></li>
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<!-- ======================================
+HERO
+====================================== -->
+
+<section class="hero"
+id="home">
+
+<div class="fade-up">
+
+<h1>
+Fast & Reliable
+<span>Computer Repair</span>
+</h1>
+
+<p>
+Professional laptop repair,
+virus removal,
+networking,
+and IT support.
+</p>
+
+<a href="#booking"
+class="btn">
+
+Book Service
+
+</a>
+
+</div>
+
+</section>
+
+<!-- ======================================
+ABOUT
+====================================== -->
+
+<section id="about"
+class="fade-up">
+
+<h2 class="section-title">
+About Us
+</h2>
+
+<div class="about">
+
+<img
+src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop">
+
+<div>
+
+<h3>
+Welcome To J.K Computers
+</h3>
+
+<p>
+We provide professional
+computer repair services
+for homes and businesses
+in Kampala Uganda.
+</p>
+
+<br>
+
+<p>
+We repair laptops,
+desktops,
+install software,
+upgrade systems,
+and remove viruses.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ======================================
+SERVICES
+====================================== -->
+
+<section id="services"
+class="fade-up">
+
+<h2 class="section-title">
+Our Services
+</h2>
+
+<div class="services-grid">
+
+<div class="service-card">
+<div class="service-icon">💻</div>
+<h3>Laptop Repair</h3>
+<p>Professional laptop repair services.</p>
+</div>
+
+<div class="service-card">
+<div class="service-icon">🦠</div>
+<h3>Virus Removal</h3>
+<p>Remove malware and spyware safely.</p>
+</div>
+
+<div class="service-card">
+<div class="service-icon">⚡</div>
+<h3>System Upgrade</h3>
+<p>SSD and RAM upgrades.</p>
+</div>
+
+<div class="service-card">
+<div class="service-icon">🌐</div>
+<h3>Networking</h3>
+<p>WiFi and office networking setup.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- ======================================
+GALLERY
+====================================== -->
+
+<section id="gallery"
+class="fade-up">
+
+<h2 class="section-title">
+Our Work
+</h2>
+
+<div class="gallery-grid">
+
+<img src="https://images.unsplash.com/photo-1517336714739-489689fd1ca8?q=80&w=1200&auto=format&fit=crop">
+
+<img src="https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?q=80&w=1200&auto=format&fit=crop">
+
+<img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop">
+
+</div>
+
+</section>
+
+<!-- ======================================
+TESTIMONIALS
+====================================== -->
+
+<section class="fade-up">
+
+<h2 class="section-title">
+Testimonials
+</h2>
+
+<div class="testimonials">
+
+<div class="testimonial">
+<p>
+Excellent service and fast repair.
+</p>
+<h4>- Brian K.</h4>
+</div>
+
+<div class="testimonial">
+<p>
+My laptop works perfectly again.
+</p>
+<h4>- Sarah N.</h4>
+</div>
+
+<div class="testimonial">
+<p>
+Highly professional technicians.
+</p>
+<h4>- David M.</h4>
+</div>
+
+</div>
+
+</section>
+
+<!-- ======================================
+BOOKING
+====================================== -->
+
+<section id="booking"
+class="fade-up">
+
+<h2 class="section-title">
+Book A Repair
+</h2>
+
+<div class="booking-form">
+
+<form>
+
+<input type="text"
+placeholder="Full Name"
+required>
+
+<input type="tel"
+placeholder="Phone Number"
+required>
+
+<select>
+
+<option>Select Service</option>
+
+<option>Laptop Repair</option>
+
+<option>Virus Removal</option>
+
+<option>Networking</option>
+
+<option>Software Installation</option>
+
+</select>
+
+<textarea rows="5"
+placeholder="Describe the problem"></textarea>
+
+<button type="submit">
+Submit Booking
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+<!-- ======================================
+DASHBOARD
+====================================== -->
+
+<section class="fade-up">
+
+<h2 class="section-title">
+Admin Dashboard
+</h2>
+
+<div class="dashboard">
+
+<div class="dashboard-grid">
+
+<div class="dashboard-card">
+<h2>120</h2>
+<p>Completed Repairs</p>
+</div>
+
+<div class="dashboard-card">
+<h2>35</h2>
+<p>Pending Repairs</p>
+</div>
+
+<div class="dashboard-card">
+<h2>UGX 4.2M</h2>
+<p>Monthly Revenue</p>
+</div>
+
+<div class="dashboard-card">
+<h2>98%</h2>
+<p>Customer Satisfaction</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ======================================
+REPAIR TRACKING
+====================================== -->
+
+<section class="fade-up">
+
+<h2 class="section-title">
+Track Your Repair
+</h2>
+
+<div class="tracker-box">
+
+<input type="text"
+id="repair-id"
+placeholder="Enter Repair ID">
+
+<button class="btn"
+onclick="trackRepair()">
+
+Track Repair
+
+</button>
+
+<div class="result"
+id="result">
+
+<h3>Status: In Progress</h3>
+
+<p>
+Your device is currently
+being repaired.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ======================================
+PRICE CALCULATOR
+====================================== -->
+
+<section class="fade-up">
+
+<h2 class="section-title">
+Repair Pricing Calculator
+</h2>
+
+<div class="calculator">
+
+<select id="service-select">
+
+<option value="0">
+Select Service
+</option>
+
+<option value="50000">
+Virus Removal — UGX 50,000
+</option>
+
+<option value="120000">
+Screen Replacement — UGX 120,000
+</option>
+
+<option value="80000">
+SSD Upgrade — UGX 80,000
+</option>
+
+</select>
+
+<h2 id="price-display">
+UGX 0
+</h2>
+
+</div>
+
+</section>
+
+<!-- ======================================
+BLOG
+====================================== -->
+
+<section id="blog"
+class="fade-up">
+
+<h2 class="section-title">
+Tech Blog
+</h2>
+
+<div class="blog-grid">
+
+<div class="blog-card">
+
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop">
+
+<div class="blog-content">
+
+<h3>
+How To Speed Up Your Laptop
+</h3>
+
+<p>
+Simple tricks to improve
+computer performance.
+</p>
+
+</div>
+
+</div>
+
+<div class="blog-card">
+
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop">
+
+<div class="blog-content">
+
+<h3>
+Best Antivirus Software
+</h3>
+
+<p>
+Protect your computer
+from cyber threats.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ======================================
+LOGIN
+====================================== -->
+
+<section class="fade-up">
+
+<h2 class="section-title">
+Customer Login
+</h2>
+
+<div class="login-box">
+
+<input type="email"
+placeholder="Email Address">
+
+<input type="password"
+placeholder="Password">
+
+<button class="btn">
+Login
+</button>
+
+</div>
+
+</section>
+
+<!-- ======================================
+INVOICE
+====================================== -->
+
+<section class="fade-up">
+
+<h2 class="section-title">
+Invoice Generator
+</h2>
+
+<div class="invoice">
+
+<h3>J.K Computers</h3>
+
+<p>Customer: John Doe</p>
+
+<p>Service: SSD Upgrade</p>
+
+<p>Cost: UGX 80,000</p>
+
+<p>Status: Paid</p>
+
+<br>
+
+<button class="btn"
+onclick="window.print()">
+
+Print Invoice
+
+</button>
+
+</div>
+
+</section>
+
+<!-- ======================================
+GOOGLE MAPS
+====================================== -->
+
+<section class="fade-up">
+
+<h2 class="section-title">
+Our Location
+</h2>
+
+<iframe
+src="https://maps.google.com/maps?q=kampala&t=&z=13&ie=UTF8&iwloc=&output=embed"
+width="100%"
+height="400"
+style="border:0;border-radius:20px;"
+allowfullscreen=""
+loading="lazy">
+</iframe>
+
+</section>
+
+<!-- ======================================
+CONTACT
+====================================== -->
+
+<section id="contact"
+class="fade-up">
+
+<div class="contact">
+
+<h2 class="section-title"
+style="color:white;">
+
+Contact Us
+
+</h2>
+
+<div class="contact-container">
+
+<div>
+
+<h3>Get In Touch</h3>
+
+<br>
+
+<p>
+📞 +256 768 684 751
+</p>
+
+<p>
+📧 info@jkcomputers.com
+</p>
+
+<p>
+📍 Kampala Uganda
+</p>
+
+</div>
+
+<form class="contact-form">
+
+<input type="text"
+placeholder="Your Name">
+
+<input type="email"
+placeholder="Your Email">
+
+<textarea rows="5"
+placeholder="Message"></textarea>
+
+<button type="submit">
+Send Message
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ======================================
+FLOATING BUTTONS
+====================================== -->
+
+<a
+href="https://wa.me/256768684751"
+class="whatsapp-btn"
+target="_blank">
+
+<i class="fab fa-whatsapp"></i>
+
+</a>
+
+<button class="theme-toggle"
+id="theme-toggle">
+
+🌙
+
+</button>
+
+<div class="live-chat">
+💬
+</div>
+
+<!-- ======================================
+FOOTER
+====================================== -->
+
+<footer>
+
+<p>
+© 2026 J.K Computers.
+All Rights Reserved.
+</p>
+
+</footer>
+
+<!-- ======================================
+JAVASCRIPT
+====================================== -->
+
+<script>
+
+/* MOBILE MENU */
+const menuBtn =
+document.getElementById("menu-btn");
+
+const navLinks =
+document.getElementById("nav-links");
+
+menuBtn.onclick = () => {
+  navLinks.classList.toggle("active");
+};
+
+/* DARK MODE */
+const themeToggle =
+document.getElementById("theme-toggle");
+
+themeToggle.onclick = () => {
+  document.body.classList.toggle("dark-mode");
+};
+
+/* ANIMATION */
+const fadeElements =
+document.querySelectorAll(".fade-up");
+
+window.addEventListener("scroll",()=>{
+
+  fadeElements.forEach(el=>{
+
+    const top =
+    el.getBoundingClientRect().top;
+
+    if(top < window.innerHeight - 100){
+      el.classList.add("active");
+    }
+
+  });
+
+});
+
+/* REPAIR TRACKER */
+function trackRepair(){
+
+  const id =
+  document.getElementById("repair-id").value;
+
+  const result =
+  document.getElementById("result");
+
+  if(id !== ""){
+    result.style.display = "block";
+  }
+
+}
+
+/* PRICE CALCULATOR */
+const select =
+document.getElementById("service-select");
+
+const display =
+document.getElementById("price-display");
+
+select.addEventListener("change",()=>{
+
+  const value = select.value;
+
+  display.innerHTML =
+  "UGX " +
+  Number(value).toLocaleString();
+
+});
+
+</script>
+
+</body>
+</html>
